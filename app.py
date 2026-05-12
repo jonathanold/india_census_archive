@@ -5,7 +5,7 @@ import os
 import re
 
 # Set page config
-st.set_page_config(page_title="The Census Archive", layout="wide")
+st.set_page_config(page_title="India Census Explorer", layout="wide")
 
 # Updated Table Series mapping
 SERIES_TITLES = {
@@ -92,8 +92,8 @@ def main():
             letter-spacing: 1px;
         }
         </style>
-        <div class="main-header">The Census Archive</div>
-        <div class="sub-header">A complete digital repository of the Indian Census Catalog</div>
+        <div class="main-header">India Census Explorer</div>
+        <div class="sub-header">Search and download Indian Census tables (1951–2011)</div>
     """, unsafe_allow_html=True)
 
     if not os.path.exists("Data/processed_census_full.parquet"):
@@ -203,7 +203,7 @@ def main():
                 "Downloads": st.column_config.NumberColumn("Downloads", format="%d")
             },
             hide_index=True,
-            use_container_width=True
+            width="stretch"
         )
 
         st.caption("Double-click a Title cell to see the full text. Click any header to sort the collection.")
