@@ -5,7 +5,7 @@ import os
 import re
 
 # Set page config
-st.set_page_config(page_title="India Census Explorer", layout="wide")
+st.set_page_config(page_title="India Census Explorer", page_icon="🇮🇳", layout="wide")
 
 # Updated Table Series mapping
 SERIES_TITLES = {
